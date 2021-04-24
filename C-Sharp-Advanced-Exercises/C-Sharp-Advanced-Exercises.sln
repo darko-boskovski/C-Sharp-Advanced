@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day Of The Week", "Day Of The Week and Rock Paper Scisors\Day Of The Week.csproj", "{FF2E057D-3AFC-48EB-8A2C-B99CE936517A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rock paper scisors", "Rock paper scisors\Rock paper scisors.csproj", "{896C2175-E203-49A0-A804-70E172043318}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF2E057D-3AFC-48EB-8A2C-B99CE936517A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF2E057D-3AFC-48EB-8A2C-B99CE936517A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF2E057D-3AFC-48EB-8A2C-B99CE936517A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF2E057D-3AFC-48EB-8A2C-B99CE936517A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{896C2175-E203-49A0-A804-70E172043318}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{896C2175-E203-49A0-A804-70E172043318}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{896C2175-E203-49A0-A804-70E172043318}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{896C2175-E203-49A0-A804-70E172043318}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3B725E7A-ECCB-4EE5-A906-982A7803C275}
+	EndGlobalSection
+EndGlobal
