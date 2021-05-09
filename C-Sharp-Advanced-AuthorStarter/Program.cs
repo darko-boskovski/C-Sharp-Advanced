@@ -76,12 +76,11 @@ namespace AuthorStarter
 
             //-In what year were published most books in a specific genre? Which genre ?
 
+        
+
 
 
             //-Which author has most books nominated for an award?
-
-
-
 
             Author mostNominatedAuthor = authors
                             .FirstOrDefault(a => a.Books
@@ -123,14 +122,37 @@ namespace AuthorStarter
                                     .ToList();
 
             Author authorWithMostNominations = authorsWithNoWins
-                                            .OrderByDescending(x=>x.Nominations)
+                                            .OrderByDescending(x => x.Nominations)
                                             .FirstOrDefault();
 
             Console.WriteLine($"The Author that has most books nominated for an award, without winning a single award Books is: '{authorWithMostNominations.Name}' with '{authorWithMostNominations.Nominations}' nominations and '{ authorWithMostNominations.Wins}' Wins.");
             Console.WriteLine("----------------------------------------------------------------------");
 
-            //-Make a histogram of books published per decade per genre.
+            //-Make a histogram of books published per decade per genre. 
+
+
+
+
+
             //- Which author has a highest percentage of nominated books ?
+
+            //??? OVDE DOBIV  Helene Wecker KAKO REZULTAT, IMA 5 NOMINACII I 1 KNIGA STO BI DOSLO 500% AKO SE BROJAT SITE NOMINACII ILI 100% AKO SE BROI KAKO EDNA NOMINACIJA???
+
+
+
+            Author authorWithMostNominationsPercentage = authors
+                                            .OrderByDescending(x => x.Nominations/x.Books.Count * 100)
+                                            .FirstOrDefault();
+
+            int mostNominationsPercentage = authors
+                                            .OrderByDescending(x => x.Nominations)
+                                            .Count();                                
+
+            double bookPercent = (authorWithMostNominationsPercentage.Nominations / authorWithMostNominationsPercentage.Books.Count) * 100;                                
+
+            Console.WriteLine($"Author that has the highest percentage of nominated books is '{authorWithMostNominationsPercentage.Name}' with '{bookPercent}'% Percent. ");
+            Console.WriteLine("----------------------------------------------------------------------");
+
 
         }
     }
