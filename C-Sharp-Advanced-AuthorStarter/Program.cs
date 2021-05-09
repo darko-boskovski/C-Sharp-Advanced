@@ -60,7 +60,7 @@ namespace AuthorStarter
                             .Any(g => g.Key == x.ID))
                             .Count())
                             .FirstOrDefault();
-                            
+
 
             int numberOfColaborationBookByAuthor = authorWithMostBooks.Books
                                         .Where(x => colaborationBooks
@@ -71,11 +71,34 @@ namespace AuthorStarter
             Console.WriteLine($"The Author With Most Colaboration Books is: '{authorWithMostBooks.Name}' with total of: '{numberOfColaborationBookByAuthor}' Books");
             Console.WriteLine("----------------------------------------------------------------------");
 
-            
+
 
 
             //-In what year were published most books in a specific genre? Which genre ?
+
+
+
             //-Which author has most books nominated for an award?
+
+
+
+
+            Author mostNominatedAuthor = authors
+                            .FirstOrDefault(a => a.Books
+                            .Select(x => x.Nominations)
+                            .Sum() == authors
+                            .Select(au => au.Books
+                            .Select(a => a.Nominations).Sum())
+                            .Max());
+
+            int mostBookNominations = mostNominatedAuthor.Books.Select(b => b.Nominations).Sum();
+
+
+
+
+            Console.WriteLine($"The Author with Most Book Award Nomination is: '{mostNominatedAuthor.Name} with '{mostBookNominations}' Books ");
+            Console.WriteLine("----------------------------------------------------------------------");
+
             //-Which author has most books that won an award ?
             //-Which author has most books nominated for an award, without winning a single award ?
             //-Make a histogram of books published per decade per genre.
