@@ -101,7 +101,7 @@ namespace AuthorStarter
 
             //-Which author has most books that won an award ?
 
-            var mostAwardedAuthor = authors
+            Author mostAwardedAuthor = authors
                             .FirstOrDefault(a => a.Books
                             .Where(x => x.Wins > 0)
                             .Count() == authors
@@ -118,7 +118,17 @@ namespace AuthorStarter
 
             //-Which author has most books nominated for an award, without winning a single award ?
 
-            
+            List<Author> authorsWithNoWins = authors
+                                    .Where(x => x.Wins == 0)
+                                    .ToList();
+
+            Author authorWithMostNominations = authorsWithNoWins
+                                            .OrderByDescending(x=>x.Nominations)
+                                            .FirstOrDefault();
+
+            Console.WriteLine($"The Author that has most books nominated for an award, without winning a single award Books is: '{authorWithMostNominations.Name}' with '{authorWithMostNominations.Nominations}' nominations and '{ authorWithMostNominations.Wins}' Wins.");
+            Console.WriteLine("----------------------------------------------------------------------");
+
             //-Make a histogram of books published per decade per genre.
             //- Which author has a highest percentage of nominated books ?
 
