@@ -19,7 +19,7 @@ namespace AuthorStarter
                             .SelectMany(x => x.Books)
                             .ToList();
 
-            var colaborationBooks = allBooks
+            List<IGrouping<int, Book>> colaborationBooks = allBooks
                             .GroupBy(x => x.ID)
                             .Where(group => group.Count() > 1)
                             .Select(el => el)
@@ -54,7 +54,7 @@ namespace AuthorStarter
 
             //-What author wrote most collaborations ? "
 
-            var authorWithMostBooks = authors
+            Author authorWithMostBooks = authors
                             .OrderByDescending(aut => aut.Books
                             .Where(x => colaborationBooks
                             .Any(g => g.Key == x.ID))
@@ -62,7 +62,7 @@ namespace AuthorStarter
                             .FirstOrDefault();
                             
 
-            var numberOfColaborationBookByAuthor = authorWithMostBooks.Books
+            int numberOfColaborationBookByAuthor = authorWithMostBooks.Books
                                         .Where(x => colaborationBooks
                                         .Any(g => g.Key == x.ID))
                                         .Count();
