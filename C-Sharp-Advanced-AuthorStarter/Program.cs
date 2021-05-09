@@ -91,7 +91,11 @@ namespace AuthorStarter
                             .Select(a => a.Nominations).Sum())
                             .Max());
 
-            int mostBookNominations = mostNominatedAuthor.Books.Select(b => b.Nominations).Sum();
+            int mostBookNominations = mostNominatedAuthor.Books
+                                    .Where(b => b.Nominations > 0)
+                                    .Count();
+                                    
+                                    
 
 
 
