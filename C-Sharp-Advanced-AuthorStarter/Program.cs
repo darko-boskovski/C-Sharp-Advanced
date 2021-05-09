@@ -94,17 +94,31 @@ namespace AuthorStarter
             int mostBookNominations = mostNominatedAuthor.Books
                                     .Where(b => b.Nominations > 0)
                                     .Count();
-                                    
-                                    
-
-
 
 
             Console.WriteLine($"The Author with Most Book Award Nomination is: '{mostNominatedAuthor.Name} with '{mostBookNominations}' Books ");
             Console.WriteLine("----------------------------------------------------------------------");
 
             //-Which author has most books that won an award ?
+
+            var mostAwardedAuthor = authors
+                            .FirstOrDefault(a => a.Books
+                            .Where(x => x.Wins > 0)
+                            .Count() == authors
+                            .Select(au => au.Books
+                            .Where(a => a.Wins > 0).Count())
+                            .Max());
+
+            int mostBookWins = mostNominatedAuthor.Books
+                                .Where(b => b.Wins > 0)
+                                .Count();
+
+            Console.WriteLine($"The Author with Most Awarded Books is: '{mostAwardedAuthor.Name} with '{ mostBookWins}' Wins ");
+            Console.WriteLine("----------------------------------------------------------------------");
+
             //-Which author has most books nominated for an award, without winning a single award ?
+
+            
             //-Make a histogram of books published per decade per genre.
             //- Which author has a highest percentage of nominated books ?
 
