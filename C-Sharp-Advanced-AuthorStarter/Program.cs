@@ -150,7 +150,7 @@ namespace AuthorStarter
 
             double bookPercent = (authorWithMostNominationsPercentage.Nominations / authorWithMostNominationsPercentage.Books.Count) * 100;                                
 
-            Console.WriteLine($"Author that has the highest percentage of nominated books is '{authorWithMostNominationsPercentage.Name}' with '{bookPercent}'% Percent. ");
+            Console.WriteLine($"Author that has the highest percentage of nominated books is '{authorWithMostNominationsPercentage.Name}' with '{bookPercent}%' . ");
             Console.WriteLine("----------------------------------------------------------------------");
 
 
