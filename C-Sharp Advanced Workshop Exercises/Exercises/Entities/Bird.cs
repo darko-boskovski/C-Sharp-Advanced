@@ -21,7 +21,7 @@ namespace Exercises.Entities
 
         public void FlySouth()
         {
-           Console.WriteLine(IsWild?"is flying south": "it's a domesticated bird");
+           Console.WriteLine(IsWild?"This Bird is flying south": "This is a domesticated bird");
         }
 
         public override void Print()

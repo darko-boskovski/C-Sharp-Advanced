@@ -17,8 +17,8 @@ namespace Exercises
             List<Dog> dogList = new List<Dog>()
             {
                  new Dog("German Sheperd", "Rex", 10),
-                  new Dog("Pudla", "Mila", 7),
-                   new Dog("Pudla", "Pussy", 3)
+                 new Dog("Pudla", "Mila", 7),
+                 new Dog("Pudla", "Pussy", 3)
             };
 
             List<Cat> catList = new List<Cat>()
@@ -31,9 +31,9 @@ namespace Exercises
 
             List<Bird> birdList = new List<Bird>()
             {
-                 new Bird(true,"Petra",1),
-               new Bird(true,"Johnatan Livingstone",3),
-               new Bird(false,"Galebco",5)
+                new Bird(true,"Petra",1),
+                new Bird(true,"Johnatan Livingstone",3),
+                new Bird(false,"Galebco",5)
 
             };
 
@@ -56,12 +56,12 @@ namespace Exercises
             Console.WriteLine("---------------------------------------------------------------------");
 
 
+
+
             birdList[0].FlySouth();
 
 
-
             //   *Get all dogs of a particular race
-
 
             List<Dog> dogRace = dogList
                  .Where(x => x.Race == "Pudla")
