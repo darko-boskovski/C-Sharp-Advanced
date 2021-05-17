@@ -34,7 +34,7 @@ namespace Exercises.Entities
                 if (value < 0 || value > 175)
 
                     throw new ArgumentOutOfRangeException();
-                    _age = value;
+                _age = value;
             }
         }
 

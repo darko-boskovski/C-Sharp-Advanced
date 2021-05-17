@@ -32,7 +32,6 @@ namespace Exercise_4
             else { Console.WriteLine($"The Words End on  diferent Letters"); };
             Console.WriteLine("-------------------------------------------");
 
-
             Console.ReadLine();
         }
 
