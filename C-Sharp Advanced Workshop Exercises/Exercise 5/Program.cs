@@ -24,14 +24,6 @@ namespace Exercise_5
             kristina.EventHandler += gligor.Hear;
             kristina.EventHandler += pero.Hear;
 
-            //kristina.SendMessage("Gligor");
-            //kristina.SendMessage("Nekoj");
-            //kristina.SendMessage("Jana");
-            //kristina.SendMessage("Ivan");
-            //kristina.SendMessage("Pero");
-            //kristina.SendMessage("Nikola");
-
-
             kristina.ComposeMessage(" Pance Manaskov", 4, "Decki vo Sreda Workshop!");
 
 
