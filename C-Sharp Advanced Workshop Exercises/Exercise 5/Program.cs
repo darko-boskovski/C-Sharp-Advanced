@@ -24,7 +24,7 @@ namespace Exercise_5
             kristina.EventHandler += gligor.SMS;
             kristina.EventHandler += pero.SMS;
 
-            kristina.SendMessage("'Test message'");
+            kristina.SendMessage("'Test message!'");
             kristina.ComposeMessage(" Pance Manaskov", 4, "Decki vo Sreda Workshop!");
 
 
