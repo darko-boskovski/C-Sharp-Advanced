@@ -12,6 +12,7 @@ namespace Exercise_1
             try
             {
                 Console.WriteLine("Hello Exercises");
+                Console.WriteLine();
 
 
                 List<Dog> dogList = new List<Dog>()
@@ -84,7 +85,7 @@ namespace Exercise_1
             }
             catch (Exception ex)
             {
-                Console.WriteLine("The Aplication Works Fine you did something Wrong :)");
+                Console.WriteLine($"The Aplication Works Fine you did something Wrong :) {ex}");
             }
 
             Console.ReadLine();

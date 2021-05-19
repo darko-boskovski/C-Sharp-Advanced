@@ -1,6 +1,6 @@
-﻿using Exercises.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using Exercises.Entities;
 
 namespace Exercise_3
 {

@@ -25,6 +25,8 @@ namespace Exercise_5
             kristina.EventHandler += pero.SMS;
 
             kristina.SendMessage("'Test message!'");
+            Console.WriteLine("Waiting for the custom message ...");
+            Console.WriteLine();
             kristina.ComposeMessage(" Pance Manaskov", 4, "Decki vo Sreda Workshop!");
 
 
