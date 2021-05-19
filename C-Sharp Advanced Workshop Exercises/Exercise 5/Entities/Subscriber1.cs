@@ -4,22 +4,22 @@ using System.Text;
 
 namespace EventsExercise.Entities
 {
-    public class Student
+    public class Subscriber1
     {
         public string Name { get; set; }
-        public Student()
+        public Subscriber1()
         {
 
         }
-        public Student(string name)
+        public Subscriber1(string name)
         {
             Name = name;
         }
 
-        public void Hear(string name)
+        public void Facebook(string message)
         {
-                 Console.WriteLine("I've got the message through FaceBook");
-  
+            Console.WriteLine($"{message} - {Name}: I've got the message through Facebook");
+
         }
     }
 }

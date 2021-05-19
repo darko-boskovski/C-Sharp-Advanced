@@ -56,8 +56,6 @@ namespace Exercises
             Console.WriteLine("---------------------------------------------------------------------");
 
 
-
-
             birdList[0].FlySouth();
 
 
@@ -78,8 +76,7 @@ namespace Exercises
             List<Bird> birdsYoungerThan3 = birdList
                                             .Where(x => x.Age < 3)
                                             .OrderBy(x => x.Name)
-                                            .ToList();
-          
+                                            .ToList();         
             }
             catch(ArgumentOutOfRangeException )
             {
@@ -89,7 +86,6 @@ namespace Exercises
             {
                 Console.WriteLine("The Aplication Works Fine you did something Wrong :)");
             }
-
 
             Console.ReadLine();
         }

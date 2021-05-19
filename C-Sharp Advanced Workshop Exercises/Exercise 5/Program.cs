@@ -10,20 +10,21 @@ namespace Exercise_5
         {
             Trainer kristina = new Trainer();
 
-            Student nikola = new Student("Nikola");
-            Student marija = new Student("Marija");
+            Subscriber1 nikola = new Subscriber1("Nikola");
+            Subscriber1 marija = new Subscriber1("Marija");
             Subscriber2 jana = new Subscriber2("Jana");
             Subscriber2 ivan = new Subscriber2("Ivan");
             Subscriber3 gligor = new Subscriber3("Gligor");
             Subscriber3 pero = new Subscriber3("Pero");
 
-            kristina.EventHandler += nikola.Hear;
-            kristina.EventHandler += marija.Hear;
-            kristina.EventHandler += jana.Hear;
-            kristina.EventHandler += ivan.Hear;
-            kristina.EventHandler += gligor.Hear;
-            kristina.EventHandler += pero.Hear;
+            kristina.EventHandler += nikola.Facebook;
+            kristina.EventHandler += marija.Facebook;
+            kristina.EventHandler += jana.Mail;
+            kristina.EventHandler += ivan.Mail;
+            kristina.EventHandler += gligor.SMS;
+            kristina.EventHandler += pero.SMS;
 
+            kristina.SendMessage("'Test message'");
             kristina.ComposeMessage(" Pance Manaskov", 4, "Decki vo Sreda Workshop!");
 
 

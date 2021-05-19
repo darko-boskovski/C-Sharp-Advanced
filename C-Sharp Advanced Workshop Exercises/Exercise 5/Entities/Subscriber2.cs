@@ -18,12 +18,12 @@ namespace Exercise_5.Entities
                 Name = name;
             }
 
-            public void Hear(string name)
+            public void Mail(string message)
             {
-          
-                Console.WriteLine("I've got the message through Mail");
-            
-             }
+
+            Console.WriteLine($"{message} - {Name}: I've got the message through E-Mail");
+
+        }
         
 
     }

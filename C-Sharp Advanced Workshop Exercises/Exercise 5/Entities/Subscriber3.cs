@@ -18,10 +18,10 @@ namespace Exercise_5.Entities
                 Name = name;
             }
 
-            public void Hear(string name)
+            public void SMS(string message)
              {
                 
-                    Console.WriteLine("I've got the message through SMS");
+                    Console.WriteLine($"{message} - {Name}: I've got the message through SMS");
                
             }
         

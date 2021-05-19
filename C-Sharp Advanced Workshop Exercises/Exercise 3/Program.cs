@@ -13,22 +13,25 @@ namespace Exercise_3
             {
                 Console.WriteLine(item);
             }
+            Console.WriteLine("-----------");
         }
 
         public static void PrintAnimal<T>(List<T> items) where T : Animal
-        {
-            items.ForEach(x => x.Print());
+        {  
+            items.ForEach(x => x.Print()); 
+            Console.WriteLine("-----------");
         }
 
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            Console.WriteLine("-----------");
 
             List<int> numList = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
             List<Bird> birdList = new List<Bird>()
             {
-                 new Bird(true,"Petra",1),
+               new Bird(true,"Petra",1),
                new Bird(true,"Johnatan Livingstone",3),
                new Bird(false,"Galebco",5)
 

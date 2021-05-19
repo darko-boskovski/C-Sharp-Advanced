@@ -6,8 +6,6 @@ namespace Exercise_2
 {
     public static class GetFirstLetter
     {
-
-
         public static string GetFirst(this string str)
         {
             if (string.IsNullOrEmpty(str))

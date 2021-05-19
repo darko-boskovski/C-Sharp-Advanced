@@ -22,17 +22,15 @@ namespace EventsExercise.Entities
 
         public void SendMessage(string message)
         {
-            EventHandler?.Invoke(message);
+            if (EventHandler != null)
+            {
+                EventHandler(message);
+            }
             Console.WriteLine("------------------------------------------");
-            Console.WriteLine($"Subscriber{message}");
-
         }
         public void ComposeMessage(string trainerName, int groupNumber, string message)
-        {
-
-
+        { 
             Thread.Sleep(3000);
-
             SendMessage($"{trainerName} informs G{groupNumber}: {message}");
 
         }
