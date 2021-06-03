@@ -5,11 +5,8 @@ using System.Text;
 
 namespace E_Shop.Services.Services.Interfaces
 {
-    public interface IBicycleService<T> where T: Bicycle
+    public interface IBicycleService<T> where T : Bicycle
     {
-
-        List<T> Seed(List<T> entity);
         List<Bicycle> GetAllProducts();
-
     }
 }

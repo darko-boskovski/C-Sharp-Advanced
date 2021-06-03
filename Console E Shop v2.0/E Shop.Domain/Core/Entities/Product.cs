@@ -14,10 +14,8 @@ namespace E_Shop.Domain.Core.Entities
         public Brand Brand { get; set; }
 
 
-
         public abstract override void Print();
         
-            
-        
+                  
     }
 }

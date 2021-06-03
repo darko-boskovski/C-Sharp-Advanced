@@ -1,24 +1,17 @@
 
 	==============================
 	==============================
-	   Customer: Darko
+	   Customer: qwe
 	=============================
 	ID:|  Product Name:  
-	1 | Bianchi VIA NIRONE 7 105 
-	2 | Ghost Kato 2.9 
-	3 | Ghost Kato 2.9 
-	4 | Bianchi VIA NIRONE 7 105 
-	5 | Ghost Kato 2.9 
+	1 | Cube Aim Pro 
 	Quantity:|Price:|Total Price:
-	1  |  97000 MKD |  97000 MKD 
-	1  |  32000 MKD |  32000 MKD 
-	1  |  32000 MKD |  32000 MKD 
-	1  |  97000 MKD |  97000 MKD 
-	1  |  32000 MKD |  32000 MKD 
-	 Total: 290000 MKD
+	1  |  36000 MKD |  36000 MKD 
+	=============================
+		 Total: 36000 MKD
 	=============================
 	=============================
-	    6/1/2021 6:27:44 PM
+	    6/3/2021 2:58:42 AM
 	=============================
 	Thank you for ycling with us!
 	=============================

@@ -64,7 +64,7 @@ namespace E_Shop.Domain.Core.Entities
                 allProducts += $"\n\t{orders.Quantity}  |  {orders.Price} MKD | " +
                     $" {orders.OrdersTotal()} MKD ";
             }
-            allProducts += $"\n\t Total: {OrderTotal()} MKD";
+            allProducts += $"\n\t=============================\n\t\t Total: {OrderTotal()} MKD";
 
             return allProducts;
         }

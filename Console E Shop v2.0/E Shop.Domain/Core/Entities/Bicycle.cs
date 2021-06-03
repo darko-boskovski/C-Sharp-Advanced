@@ -11,7 +11,6 @@ namespace E_Shop.Domain.Core.Entities
         public Size Size { get; set; }
         public TypeOfBike Type { get; set; }
 
-
         public Bicycle()
         {
 

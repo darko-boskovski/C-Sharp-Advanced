@@ -15,4 +15,8 @@
     <ProjectReference Include="..\E Shop.Services\E Shop.Services.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Db\" />
+  </ItemGroup>
+
 </Project>

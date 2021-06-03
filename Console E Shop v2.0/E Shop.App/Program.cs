@@ -1,6 +1,7 @@
 ﻿using ConsoleTables;
 using E_Shop.Domain.Core.Entities;
 using E_Shop.Domain.Core.Enums;
+using E_Shop.Domain.Db;
 using E_Shop.Services.Services.Implementations;
 using E_Shop.Services.Services.Interfaces;
 using Newtonsoft.Json;
@@ -18,32 +19,20 @@ namespace E_Shop.App
     {
 
         public static IBicycleService<Bicycle> _bicycleService = new BicycleService<Bicycle>();
-
+        public static IDb<Bicycle> _bicycleDataBase = new BicycleDb<Bicycle>();
 
         static void Main(string[] args)
         {
-
             try
             {
 
                 List<Bicycle> bicyclesToJson = _bicycleService.GetAllProducts();
                 BicycleGenerator.RandBikeGenerator(bicyclesToJson, 20);
-                _bicycleService.Seed(bicyclesToJson);
-                string bicyclesJson = JsonConvert.SerializeObject(bicyclesToJson);
-                string directoryPath = @"..\..\..\Json\";
-                string filePath = directoryPath + $@"bicyclesJson.json";
-
-                if (!Directory.Exists(directoryPath)) Directory.CreateDirectory(directoryPath);
-                if (!File.Exists(filePath)) File.Create(filePath).Close();
-
-
-                File.WriteAllText(filePath, bicyclesJson);
-
+                bicyclesToJson.ForEach(x => _bicycleDataBase.Insert(x));
 
                 List<Bicycle> products = new List<Bicycle>();
-                string readJson = File.ReadAllText(filePath);
-                products = JsonConvert.DeserializeObject<List<Bicycle>>(readJson);
 
+                products = _bicycleDataBase.GetAll();
 
                 var vendors = Enum.GetValues(typeof(Brand)).Cast<Brand>().ToList();
 

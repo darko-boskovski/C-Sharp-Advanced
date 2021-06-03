@@ -20,13 +20,10 @@ namespace E_Shop.Domain.Core.Entities
         {
 
         }
-
         public User(string name)
         {
-            Name = name;          
+            Name = name;
         }
-
-
 
         public void AddAdress(string street, int number, string city)
         {
@@ -36,14 +33,14 @@ namespace E_Shop.Domain.Core.Entities
             address.City = city;
         }
 
-        public  class Address
+        public class Address
         {
-            public  string Street { get; set; }
-            public  int Number { get; set; }
-            public   string City { get; set; }
+            public string Street { get; set; }
+            public int Number { get; set; }
+            public string City { get; set; }
 
         }
-     
+
         public event EventDelegate EventHandlerOne;
         public event EventDelegateTwo EventHandlerTwo;
 
@@ -55,10 +52,10 @@ namespace E_Shop.Domain.Core.Entities
             EventHandlerOne?.Invoke(payment);
         }
 
-       
+
 
         public void ShippingOrder(string shipping, Address address)
-        {   
+        {
             Console.WriteLine("\tShipping your order...");
             Thread.Sleep(2000);
             Console.WriteLine("\t============================");

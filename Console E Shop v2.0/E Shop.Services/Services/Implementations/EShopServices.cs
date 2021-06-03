@@ -15,7 +15,7 @@ namespace E_Shop.Services.Services.Implementations
     {
 
 
-        public static IUserService<User> _userService = new UserService<User>();
+        public static UIService<User> _userService = new UIService<User>();
 
 
         public static bool BrowseProducts(User user, int id, List<Brand> brands, List<Bicycle> products)
@@ -29,7 +29,7 @@ namespace E_Shop.Services.Services.Implementations
 
                 switch (productsInput)
                 {
-                    case 1:                     
+                    case 1:
                         ListAllProducts(user, id, brands, products);
                         return true;
                     case 2:
@@ -175,7 +175,7 @@ namespace E_Shop.Services.Services.Implementations
 
                 if (searchList.Count == 0)
                 {
-                    Console.WriteLine("\nThere are are no Such Bicycles!");
+                    Console.WriteLine("\n\tThere are are no Such Bicycles!");
                     Thread.Sleep(2000);
                     return 1;
                 }
@@ -224,7 +224,7 @@ namespace E_Shop.Services.Services.Implementations
 
                 if (searchList.Count == 0)
                 {
-                    Console.WriteLine("\nThere are are no Such Bicycles!");
+                    Console.WriteLine("\n\tThere are are no Such Bicycles!");
                     Thread.Sleep(2000);
                     return 1;
                 }
@@ -267,7 +267,6 @@ namespace E_Shop.Services.Services.Implementations
                     }
                 }
             }
-            Thread.Sleep(2000);
             return MakeOrder(searchList, user, index);
 
         }
@@ -281,13 +280,13 @@ namespace E_Shop.Services.Services.Implementations
             bool orderExit1 = true;
             while (orderExit1)
             {
-               
+
                 bool userMakeOrderInput = int.TryParse(Console.ReadLine(), out int makeOrderInput);
                 switch (makeOrderInput)
                 {
                     case 1:
                         int userQuantInput = 0;
-                        while (true) 
+                        while (true)
                         {
                             Console.WriteLine("\t===============================================================");
                             Console.WriteLine("\tChoose product from the list by entering the Bicycle ID...");
@@ -362,7 +361,7 @@ namespace E_Shop.Services.Services.Implementations
                                 break;
                             }
                         }
-                     
+
                         break;
                     case 9:
                         break;

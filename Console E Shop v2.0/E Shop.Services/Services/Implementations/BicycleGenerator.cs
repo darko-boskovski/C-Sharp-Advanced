@@ -17,7 +17,6 @@ namespace E_Shop.Services.Services.Implementations
 
         public static List<Bicycle> RandBikeGenerator(List<Bicycle> bikeList, int number)
         {
-
             List<string> bikeNames = new List<string> {
                 "THE CLIMBER",
                 "RENEGADE 7.0",
@@ -44,9 +43,7 @@ namespace E_Shop.Services.Services.Implementations
                 bikeList.Add(newbicycle);
 
             }
-
             return bikeList;
-
         }
 
     }

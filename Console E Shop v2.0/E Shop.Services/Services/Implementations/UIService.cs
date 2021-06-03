@@ -1,6 +1,7 @@
 ﻿using ConsoleTables;
 using E_Shop.Domain.Core.Entities;
 using E_Shop.Domain.Core.Enums;
+using E_Shop.Domain.Db;
 using E_Shop.Services.Services.Interfaces;
 using SEDC.TryBeingFit.Services.Helpers;
 using System;
@@ -13,12 +14,11 @@ namespace E_Shop.Services.Services.Implementations
 {
 
 
-    public class UserService<T> : IUserService<T> where T : User
+    public class UIService<T> : IUIService<T> where T : User
     {
 
 
-
-
+        #region Menus
         public void ShowMainMenu()
         {
             Console.Clear();
@@ -57,7 +57,67 @@ namespace E_Shop.Services.Services.Implementations
             Console.WriteLine("\t================================");
         }
 
+        public void OrderMenu()
+        {
 
+            Console.WriteLine("\t================================");
+            Console.WriteLine("\n\t Would you like to make an order? \n");
+            Console.WriteLine("\n\t 1) - Make order");
+            Console.WriteLine("\n\t 9) - Go back");
+            Console.WriteLine("\t================================");
+            Console.ResetColor();
+        }
+
+        public void SortMenu()
+        {
+
+            Console.WriteLine("\t================================");
+            Console.WriteLine("\n\t Sort products by: \n");
+            Console.WriteLine("\n\t 1) - Price (ascending)");
+            Console.WriteLine("\n\t 2) - Price (descending)");
+            Console.WriteLine("\n\t 3) - Model (ascending)");
+            Console.WriteLine("\n\t 4) - Model (descending)");
+            Console.WriteLine("\n\t 9) - Go back");
+            Console.WriteLine("\t================================");
+            Console.ResetColor();
+        }
+
+        public void PaymentMenu()
+        {
+
+            Console.WriteLine("\t================================");
+            Console.WriteLine("\t Choose payment method: \n");
+            Console.WriteLine("\n\t 1) - Pay with credit card");
+            Console.WriteLine("\n\t 2) - Pay with PayPal");
+            Console.WriteLine("\n\t 9) - Go back");
+            Console.WriteLine("\t================================");
+            Console.ResetColor();
+        }
+
+        public void ShippingMenu()
+        {
+
+            Console.WriteLine("\t================================");
+            Console.WriteLine("\t Choose shipping method: \n");
+            Console.WriteLine("\n\t 1) - Makedonska Posta");
+            Console.WriteLine("\n\t 2) - Delco");
+            Console.WriteLine("\n\t 9) - Go back");
+            Console.WriteLine("\t================================");
+            Console.ResetColor();
+        }
+
+        public void SeeHisotryMenu()
+        {
+
+            Console.WriteLine("\t================================");
+            Console.WriteLine("\t Choose orders history option: \n");
+            Console.WriteLine("\n\t 1) - Orders smaller than 30000 MKD");
+            Console.WriteLine("\n\t 2) - Orders larger than 30000 MKD");
+            Console.WriteLine("\n\t 9) - Go back");
+            Console.WriteLine("\t================================");
+            Console.ResetColor();
+        }
+        #endregion
         public bool ShoppingCart(T user)
         {
             Console.Clear();
@@ -140,7 +200,6 @@ namespace E_Shop.Services.Services.Implementations
         public string PrintReceipt(T user)
         {
 
-
             DateTime timeNow = DateTime.Now;
             string receipt = $"" +
                 $"\n\t==============================" +
@@ -158,35 +217,6 @@ namespace E_Shop.Services.Services.Implementations
                 $"\n\t=============================";
             return receipt;
         }
-
-
-
-
-        public void OrderMenu()
-        {
-
-            Console.WriteLine("\t================================");
-            Console.WriteLine("\n\t Would you like to make an order? \n");
-            Console.WriteLine("\n\t 1) - Make order");
-            Console.WriteLine("\n\t 9) - Go back");
-            Console.WriteLine("\t================================");
-            Console.ResetColor();
-        }
-
-        public void SortMenu()
-        {
-
-            Console.WriteLine("\t================================");
-            Console.WriteLine("\n\t Sort products by: \n");
-            Console.WriteLine("\n\t 1) - Price (ascending)");
-            Console.WriteLine("\n\t 2) - Price (descending)");
-            Console.WriteLine("\n\t 3) - Model (ascending)");
-            Console.WriteLine("\n\t 4) - Model (descending)");
-            Console.WriteLine("\n\t 9) - Go back");
-            Console.WriteLine("\t================================");
-            Console.ResetColor();
-        }
-
 
         public bool PayWithCreditCard(T user)
         {
@@ -269,44 +299,6 @@ namespace E_Shop.Services.Services.Implementations
             Thread.Sleep(2000);
         }
 
-        public void PaymentMenu()
-        {
-
-            Console.WriteLine("\t================================");
-            Console.WriteLine("\t Choose payment method: \n");
-            Console.WriteLine("\n\t 1) - Pay with credit card");
-            Console.WriteLine("\n\t 2) - Pay with PayPal");
-            Console.WriteLine("\n\t 9) - Go back");
-            Console.WriteLine("\t================================");
-            Console.ResetColor();
-        }
-
-        public void ShippingMenu()
-        {
-
-            Console.WriteLine("\t================================");
-            Console.WriteLine("\t Choose shipping method: \n");
-            Console.WriteLine("\n\t 1) - Makedonska Posta");
-            Console.WriteLine("\n\t 2) - Delco");
-            Console.WriteLine("\n\t 9) - Go back");
-            Console.WriteLine("\t================================");
-            Console.ResetColor();
-        }
-
-
-
-        public void SeeHisotryMenu()
-        {
-
-            Console.WriteLine("\t================================");
-            Console.WriteLine("\t Choose orders history option: \n");
-            Console.WriteLine("\n\t 1) - Orders smaller than 30000 MKD");
-            Console.WriteLine("\n\t 2) - Orders larger than 30000 MKD");
-            Console.WriteLine("\n\t 9) - Go back");
-            Console.WriteLine("\t================================");
-            Console.ResetColor();
-        }
-
         public void HistoryLessThan30000(List<T> userHistory)
         {
             Console.WriteLine("\tOrders smaller than 30000 MKD");
@@ -324,8 +316,6 @@ namespace E_Shop.Services.Services.Implementations
             smallerThan.ForEach(x => x.ListOrder.Print());
             Thread.Sleep(4000);
         }
-
-
         public void HistoryMoreThan30000(List<T> userHistory)
         {
             Console.WriteLine("\tOrders larger than 30000 MKD");

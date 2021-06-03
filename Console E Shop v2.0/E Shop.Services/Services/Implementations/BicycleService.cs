@@ -2,7 +2,6 @@
 using E_Shop.Domain.Core.Enums;
 using E_Shop.Domain.Db;
 using E_Shop.Services.Services.Interfaces;
-using SEDC.TryBeingFit.Domain.Db;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,11 +20,6 @@ namespace E_Shop.Services.Services.Implementations
         public BicycleService()
         {
             _db = new BicycleDb<T>();
-        }
-
-        public List<T> Seed(List<T> entity)
-        {
-            return _bicycleDataBase.Insert(entity);
         }
 
         public List<Bicycle> GetAllProducts()
