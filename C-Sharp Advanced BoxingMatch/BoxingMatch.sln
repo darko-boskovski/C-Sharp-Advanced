@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31313.79
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoxingMatch", "BoxingMatch\BoxingMatch.csproj", "{FD7718DE-2477-4354-B211-B7FB235DD1E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoxingLibrary", "BoxingLibrary\BoxingLibrary.csproj", "{8982F1FF-036F-4A07-8661-CE7D977C0DF0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD7718DE-2477-4354-B211-B7FB235DD1E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD7718DE-2477-4354-B211-B7FB235DD1E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD7718DE-2477-4354-B211-B7FB235DD1E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD7718DE-2477-4354-B211-B7FB235DD1E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8982F1FF-036F-4A07-8661-CE7D977C0DF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8982F1FF-036F-4A07-8661-CE7D977C0DF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8982F1FF-036F-4A07-8661-CE7D977C0DF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8982F1FF-036F-4A07-8661-CE7D977C0DF0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A3EE8632-034F-4039-A631-F884A12E0D98}
+	EndGlobalSection
+EndGlobal
